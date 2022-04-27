@@ -36,8 +36,6 @@ $ ssh -T git@github.com
 $ #拷贝公钥
 $ cat ~/.ssh/id_ed25519.pub |pbcopy
 ```
-![Img](./FILES/git%20ssh配置.md/935b6a0c.png)
-
 
 #### 4. 修改本地仓库配置
 ```shell
@@ -84,7 +82,7 @@ Host gitee.com
   IdentityFile ~/.ssh/id_ed25519_gitee
 ```
 确认各个配置是否能成功连接：
-![Img](./FILES/git%20ssh配置.md/img-20220427151519.png)
+![](https://raw.githubusercontent.com/fegnze/pic/main/20220427164128.png)
 
 3. 修改本地仓空中远程URL的域名（☀️☀️☀️XXX.github.com☀️☀️☀️需同～/.ssh/config中的对应Host匹配）
 ```shell
