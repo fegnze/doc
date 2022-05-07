@@ -87,8 +87,21 @@ Host gitee.com
 3. 修改本地仓空中远程URL的域名（☀️☀️☀️XXX.github.com☀️☀️☀️需同～/.ssh/config中的对应Host匹配）
 ```shell
 $ git remote rm origin
-git remote -v
-git remote add origin git remote add origin git@XXX.github.com:xxx/xxx.git
+$ git remote -v
+$ git remote add origin git remote add origin git@XXX.github.com:xxx/xxx.git
+```
+---
+#### 如完成上述过程,重启后失效,是因为没要触发ssh-add操作,
+可先执行:
+```shell 
+$ ssh -T git@github.com # 触发(AddKeysToAgent)
+``` 
+
+或在.bash_profile中添加:
+```shell
+$ ssh-add ~/.ssh/id_ed25519 > /dev/null 2>&1
+$ ssh-add ~/.ssh/id_ed25519_xxx > /dev/null 2>&1
+$ ssh-add ~/.ssh/id_ed25519_yyy > /dev/null 2>&1
 ```
 ---
 #### 如出现💣ERROR: Permission to XXX.git denied to user XXX，说明相同平台的不同账户中是否存在相同证书,平台无法自行做出选择;此时,需删除重复的证书,重新按上述步骤配置多套证书;
