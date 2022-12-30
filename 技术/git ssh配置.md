@@ -88,7 +88,7 @@ Host gitee.com
 ```shell
 $ git remote rm origin
 $ git remote -v
-$ git remote add origin git remote add origin git@XXX.github.com:xxx/xxx.git
+$ git remote add origin git@XXX.github.com:xxx/xxx.git
 ```
 ---
 #### 如完成上述过程,重启后失效,是因为没要触发ssh-add操作,
